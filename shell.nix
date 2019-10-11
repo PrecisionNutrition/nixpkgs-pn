@@ -12,7 +12,7 @@ self: super:
     basePackages = [
       self.yarn
       super.python
-      super.nodejs-11_x
+      super.nodejs-10_x
       super.gnumake
       super.gcc
       super.readline

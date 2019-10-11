@@ -10,7 +10,7 @@ self: super:
       sha256 = "14h293kixxiww41daj0xyjii8d9mgr2ah5sxadass60p61ynxsq4";
     };
 
-    buildInputs = [ super.nodejs-11_x ];
+    buildInputs = [ super.nodejs-10_x ];
 
     installPhase = ''
         mkdir -p $out/{bin,libexec/yarn/}
