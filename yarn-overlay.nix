@@ -1,7 +1,7 @@
 self: super:
 
 {
-  yarn = builtins.stdenv.mkDerivation rec {
+  yarn = super.stdenv.mkDerivation rec {
     pname = "yarn";
     version = "1.19.0";
 
@@ -19,7 +19,7 @@ self: super:
         ln -s $out/libexec/yarn/bin/yarn.js $out/bin/yarnpkg
     '';
 
-    meta = with builtins.stdenv.lib; {
+    meta = with super.stdenv.lib; {
       homepage = https://yarnpkg.com/;
       description = "Fast, reliable, and secure dependency management for javascript";
       license = licenses.bsd2;
