@@ -1,0 +1,3 @@
+[
+  ./yarn-overlay.nix
+]
