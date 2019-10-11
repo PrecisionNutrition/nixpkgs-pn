@@ -1,6 +1,5 @@
 self: super:
 
-with super;
 {
   shellStuff = super.stdenv.mkDerivation rec {
     emberShellHooks = ''
@@ -11,21 +10,21 @@ with super;
     '';
 
     basePackages = [
-      python
-      nodejs-10_x
-      pkgs.yarn
-      gnumake
-      gcc
-      readline
-      openssl
-      zlib
-      libxml2
-      curl
-      libiconv
+      self.yarn
+      super.python
+      super.nodejs-11_x
+      super.gnumake
+      super.gcc
+      super.readline
+      super.openssl
+      super.zlib
+      super.libxml2
+      super.curl
+      super.libiconv
     ];
 
-    emberPkgs = if system == "x86_64-darwin" then
-      basePackages ++ [darwin.apple_sdk.frameworks.CoreServices]
+    emberPkgs = if super.system == "x86_64-darwin" then
+      basePackages ++ [super.darwin.apple_sdk.frameworks.CoreServices]
     else
       basePackages;
   };
