@@ -10,7 +10,7 @@ self: super:
     '';
 
     basePackages = [
-      self.yarn
+      super.yarn
       super.python
       super.nodejs-10_x
       super.gnumake
