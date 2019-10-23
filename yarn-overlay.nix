@@ -3,14 +3,14 @@ self: super:
 {
   yarn = super.stdenv.mkDerivation rec {
     pname = "yarn";
-    version = "1.13.0";
+    version = "1.19.0";
 
     src = super.fetchzip {
       url = "https://github.com/yarnpkg/yarn/releases/download/v${version}/yarn-v${version}.tar.gz";
-      sha256 = "0wkh8m41g5sajxlchsaqardn4v2ax06xywk12fwdjn5j3sxlgq2a";
+      sha256 = "14h293kixxiww41daj0xyjii8d9mgr2ah5sxadass60p61ynxsq4";
     };
 
-    buildInputs = [ super.nodejs ];
+    buildInputs = [ super.nodejs-10_x ];
 
     installPhase = ''
         mkdir -p $out/{bin,libexec/yarn/}
