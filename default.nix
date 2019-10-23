@@ -21,7 +21,6 @@ self: super: rec {
   basePackages = [
     yarn
     super.python
-    super.nodejs-10_x
     super.gnumake
     super.gcc
     super.readline
