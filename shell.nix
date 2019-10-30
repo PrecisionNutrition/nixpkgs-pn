@@ -7,6 +7,7 @@ self: super:
       export NODE_PATH=$PWD/.nix-node
       export NPM_CONFIG_PREFIX=$PWD/.nix-node
       export PATH=$NODE_PATH/bin:$PATH
+      export PS1='\n\[\033[1;32m\][nix-shell:\w]($(git rev-parse --abbrev-ref HEAD))\$\[\033[0m\] '
     '';
 
     basePackages = [
