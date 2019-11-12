@@ -1,5 +1,12 @@
 self: super:
 
+let
+    pkgs = import (builtins.fetchTarball {
+      name = "nixos-19.03";  # Descriptive name
+      url = https://github.com/nixos/nixpkgs-channels/archive/aea8dde8b321e373c71eb4e785c1cacd2824c878.tar.gz;
+      sha256 = "092sw0igmnbxg3azkdijhydxl4r9gb1z0593c4nx1d09y3fb5gcb";
+    }) {};
+in
 {
   shellStuff = super.stdenv.mkDerivation rec {
     emberShellHooks = ''
@@ -12,16 +19,16 @@ self: super:
 
     basePackages = [
       self.yarn
-      super.python
-      super.nodejs-10_x
-      super.gnumake
-      super.gcc
-      super.readline
-      super.openssl
-      super.zlib
-      super.libxml2
-      super.curl
-      super.libiconv
+      pkgs.python
+      pkgs.nodejs-8_x
+      pkgs.gnumake
+      pkgs.gcc
+      pkgs.readline
+      pkgs.openssl
+      pkgs.zlib
+      pkgs.libxml2
+      pkgs.curl
+      pkgs.libiconv
     ];
 
     emberPkgs = if super.system == "x86_64-darwin" then
