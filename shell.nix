@@ -2,9 +2,9 @@ self: super:
 
 let
     pkgs = import (builtins.fetchTarball {
-      name = "nixos-19.03";  # Descriptive name
-      url = https://github.com/nixos/nixpkgs-channels/archive/aea8dde8b321e373c71eb4e785c1cacd2824c878.tar.gz;
-      sha256 = "092sw0igmnbxg3azkdijhydxl4r9gb1z0593c4nx1d09y3fb5gcb";
+      name = "nixos-19.09-2020-02-05";  # Descriptive name
+      url = https://github.com/nixos/nixpkgs-channels/archive/ea553d8c67c6a718448da50826ff5b6916dc9c59.tar.gz;
+      sha256 = "0g9smv36sk42rfyzi8wyq2wl11c5l0qaldij1zjdj60s57cl3wgj";
     }) {};
 in
 {
@@ -23,7 +23,7 @@ in
     basePackages = [
       self.yarn
       pkgs.python
-      pkgs.nodejs-8_x
+      pkgs.nodejs-10_x
       pkgs.gnumake
       pkgs.gcc
       pkgs.readline
