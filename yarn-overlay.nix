@@ -17,6 +17,6 @@ in
       sha256 = "14h293kixxiww41daj0xyjii8d9mgr2ah5sxadass60p61ynxsq4";
     };
 
-    buildInputs = [ pkgs.nodejs-8_x ];
+    buildInputs = [ pkgs.nodejs-10_x ];
   });
 }
