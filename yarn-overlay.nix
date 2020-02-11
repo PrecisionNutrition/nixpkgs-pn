@@ -10,13 +10,13 @@ in
 {
 
   yarn = pkgs.yarn.overrideAttrs (oldAttrs: rec {
-    version = "1.19.0";
+    version = "1.22.0";
 
     src = super.fetchzip {
       url = "https://github.com/yarnpkg/yarn/releases/download/v${version}/yarn-v${version}.tar.gz";
-      sha256 = "14h293kixxiww41daj0xyjii8d9mgr2ah5sxadass60p61ynxsq4";
+      sha256 = "0hbsdbrqx5xhr171ik862v51xwjzbfncic92pgbnhnlmxy2y974x";
     };
 
-    buildInputs = [ pkgs.nodejs-10_x ];
+    buildInputs = [ pkgs.nodejs-12_x ];
   });
 }
