@@ -10,7 +10,7 @@ in
 {
 
   yarn = pkgs.yarn.overrideAttrs (oldAttrs: rec {
-    version = "1.22.0";
+    version = "1.22.4";
 
     src = super.fetchzip {
       url = "https://github.com/yarnpkg/yarn/releases/download/v${version}/yarn-v${version}.tar.gz";
