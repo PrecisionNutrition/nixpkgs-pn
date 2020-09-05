@@ -4,7 +4,7 @@ let
     pkgs = import (builtins.fetchTarball {
       name = "nixos-20.03-2020-09-05";  # Descriptive name
       url = https://github.com/nixos/nixpkgs-channels/archive/51d115ac89d676345b05a0694b23bd2691bf708a.tar.gz;
-      sha256 = "0g9smv36sk42rfyzi8wyq2wl11c5l0qaldij1zjdj60s57cl3wgj";
+      sha256 = "1gfjaa25nq4vprs13h30wasjxh79i67jj28v54lkj4ilqjhgh2rs";
     }) {};
 in
 {
@@ -14,7 +14,7 @@ in
 
     src = super.fetchzip {
       url = "https://github.com/yarnpkg/yarn/releases/download/v${version}/yarn-v${version}.tar.gz";
-      sha256 = "0hbsdbrqx5xhr171ik862v51xwjzbfncic92pgbnhnlmxy2y974x";
+      sha256 = "1yb1pb80jhw6mx1r28hf7zd54dygmnrf30r3fz7kn9nrgdpl5in8";
     };
 
     buildInputs = [ pkgs.nodejs-12_x ];
