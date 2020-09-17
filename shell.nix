@@ -32,6 +32,7 @@ in
       pkgs.libxml2
       pkgs.curl
       pkgs.libiconv
+      pkgs.watchman
     ];
 
     emberPkgs = if super.system == "x86_64-darwin" then
