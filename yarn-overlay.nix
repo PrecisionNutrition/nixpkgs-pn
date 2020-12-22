@@ -2,9 +2,9 @@ self: super:
 
 let
     pkgs = import (builtins.fetchTarball {
-      name = "nixos-20.03-2020-09-05";  # Descriptive name
-      url = https://github.com/nixos/nixpkgs-channels/archive/51d115ac89d676345b05a0694b23bd2691bf708a.tar.gz;
-      sha256 = "1gfjaa25nq4vprs13h30wasjxh79i67jj28v54lkj4ilqjhgh2rs";
+      name = "nixos-unstable-2020-12-20";  # Descriptive name
+      url = "https://github.com/NixOS/nixpkgs/archive/e9158eca70ae59e73fae23be5d13d3fa0cfc78b4.tar.gz";
+      sha256 = "0cnmvnvin9ixzl98fmlm3g17l6w95gifqfb3rfxs55c0wj2ddy53";
     }) {};
 in
 {
