@@ -2,7 +2,7 @@ self: super:
 
 let
     sources = import ( ./nix/sources.nix ) {};
-    pkgs = source.nixpkgs;
+    pkgs = sources.nixpkgs;
 in
 {
   shellStuff = super.stdenv.mkDerivation rec {
