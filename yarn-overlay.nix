@@ -1,4 +1,4 @@
-# currently unused as nixpkgs 20.09 has a version we like
+# we use custom yarn to ensure it links to the right version of node
 self: super:
 
 let

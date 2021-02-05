@@ -15,7 +15,7 @@ in
     '';
 
     basePackages = [
-      pkgs.yarn
+      self.yarn
       pkgs.python
       pkgs.nodejs-14_x
       pkgs.gnumake
