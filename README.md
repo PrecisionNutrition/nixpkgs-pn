@@ -1,5 +1,14 @@
 # nixpkgs-pn
 
+## updating nixpkgs
+
+```nix
+nix-shell -p niv
+niv update
+```
+
+if you need to change nix version update the branch in `sources.json`
+
 ## Development
 
 to update a package version, i.e. yarn
