@@ -1,1 +1,1 @@
-[ ./yarn-overlay.nix ./shell.nix ]
+[ ./yarn-overlay.nix ./shell.nix ./pkgs.nix ]
