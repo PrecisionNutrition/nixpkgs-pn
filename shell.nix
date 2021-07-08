@@ -5,13 +5,20 @@ let
   pkgs = import sources.nixpkgs { };
 in {
   shellStuff = super.stdenv.mkDerivation rec {
-    emberShellHooks = ''
+    baseHooks = ''
       mkdir -p .nix-node
       export NODE_PATH=$PWD/.nix-node
       export NPM_CONFIG_PREFIX=$PWD/.nix-node
       export PATH=$NODE_PATH/bin:$PATH
       export PS1='\n\[\033[1;32m\][nix-shell:\w]($(git rev-parse --abbrev-ref HEAD))\$\[\033[0m\] '
     '';
+
+    localPath = ./. + "/local.nix";
+
+    emberShellHooks = if builtins.pathExists localPath then
+      baseHooks + (import localPath).hooks
+    else
+      baseHooks;
 
     basePackages = [
       self.yarn
