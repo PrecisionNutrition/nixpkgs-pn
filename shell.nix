@@ -26,6 +26,7 @@ in {
       pkgs.curl
       pkgs.libiconv
       pkgs.watchman
+      pkgs.nodePackages.npm
     ];
 
     emberPkgs = if super.system == "x86_64-darwin" then
