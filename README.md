@@ -7,11 +7,11 @@ nix-shell -p niv
 niv update
 ```
 
-if you need to change nix version update the branch in `sources.json`
+If you need to change nix version update the branch in `sources.json`
 
 ## Development
 
-to update a package version, i.e. yarn
+To update a package version, i.e. yarn
 you will need to change the version number and recalculate the sha
 
 ```
@@ -20,7 +20,7 @@ nix-prefetch-url --unpack https://github.com/NixOS/nix/archive/1f795f9f44607cc5b
 
 ## Releasing
 
-* merge pull request
-* tag a new version of master
-* push tags
-* change tag version on applications using `nixpkgs-pn`
+* Merge pull request
+* Tag a new version of master
+* Push tags
+* Change tag version on applications using `nixpkgs-pn`
