@@ -14,9 +14,9 @@ in {
     '';
 
     basePackages = [
-      self.yarn
+      pkgs.yarn
       pkgs.python
-      pkgs.nodejs-16_x
+      pkgs.nodejs-14_x
       pkgs.gnumake
       pkgs.gcc
       pkgs.readline
@@ -26,7 +26,7 @@ in {
       pkgs.curl
       pkgs.libiconv
       pkgs.watchman
-      pkgs.nodePackages_latest.npm
+      pkgs.nodePackages.npm
     ];
 
     emberPkgs = if super.system == "x86_64-darwin" then
